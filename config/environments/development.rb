@@ -34,6 +34,7 @@ Rubyfuza::Application.configure do
 
   # Amazon SES
   config.action_mailer.delivery_method = :ses
+  config.action_mailer.default_url_options = { :host => "localhost:3000" }
   # Throw exceptions while sending mail
   config.action_mailer.raise_delivery_errors = true
 end
