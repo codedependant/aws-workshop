@@ -10,10 +10,15 @@ class ChirpsController < ApplicationController
     end
   end
 
+  def user
+    @user = User.find_by_name!(params[:name])
+    @chirps = @user.relevant_chirps
+  end
+
   # POST /chirps
   # POST /chirps.json
   def create
-    @chirp = Chirp.new(params[:chirp])
+    @chirp = ChirpCreationService.new.create(params[:chirp])
 
     respond_to do |format|
       if @chirp.save
