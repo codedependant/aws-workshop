@@ -1,7 +1,7 @@
 class UserMailer < ActionMailer::Base
   # See Amazon Developer Guide for important advice
   # regarding 'from' email address
-  default :from => "from@example.com"
+  default :from => "shayarealg@gmail.com"
 
   def welcome_email(user)
     @user = user

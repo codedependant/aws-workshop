@@ -1,0 +1,1 @@
+Tinia.activate_active_record!
